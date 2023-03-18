@@ -22,5 +22,7 @@ To run the production server, first build the production build, then run it:
 
 ```shell
 yarn build
-yarn start
+
+# Enable source maps, so that reported errors point to actual source
+NODE_OPTIONS=--enable-source-maps yarn start
 ```
