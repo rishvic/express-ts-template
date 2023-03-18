@@ -271,3 +271,6 @@ fabric.properties
 
 # ESLint config
 .eslintrc.*
+
+# Webpack configuration
+webpack.config.js

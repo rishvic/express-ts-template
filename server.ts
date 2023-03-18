@@ -1,11 +1,11 @@
 // Module dependencies.
-import app from "./app";
-import debug from "debug";
-import * as http from "http";
+import app = require("./app");
+import debug = require("debug");
+import http = require("http");
 const debugf = debug("express-ts-template:server");
 
 // Get port from environment and store in Express.
-const port = normalizePort(process.env.PORT || "3000");
+const port = normalizePort(process.env["PORT"] || "3000");
 app.set("port", port);
 
 // Create HTTP server.
