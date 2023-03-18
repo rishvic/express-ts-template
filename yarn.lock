@@ -194,10 +194,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsconfig/node18@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@tsconfig/node18@npm:1.0.1"
-  checksum: aba11b453e40b03a33321e5b2bd51ba2d5213503bb95f1ecd56a5dd0be31eef1ab9ddfe06b4eae99075692641de905d57a38d671a9288bacac82327d393de1e2
+"@tsconfig/node18-strictest@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@tsconfig/node18-strictest@npm:1.0.0"
+  checksum: 551f103b0f08cfb01ac22142193964d5cc5f8f077be2cc39ea3c6046161809ec7eef5d2686905ef04fab6fe62011253ce32516943faf72b57a8ac27bd15fa231
   languageName: node
   linkType: hard
 
@@ -1184,7 +1184,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "express-ts-template@workspace:."
   dependencies:
-    "@tsconfig/node18": ^1.0.1
+    "@tsconfig/node18-strictest": ^1.0.0
     "@types/cookie-parser": ^1.4.3
     "@types/debug": ^4.1.7
     "@types/express": ^4.17.17
