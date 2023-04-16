@@ -2,14 +2,13 @@ const CopyPlugin = require("copy-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
 const nodeExternals = require("webpack-node-externals");
+const TranspilePlugin = require("transpile-webpack-plugin");
 const path = require("path");
 
 /** @type import("webpack").Configuration */
 const webpackConfig = {
   mode: "production",
-  entry: {
-    www: "./server.ts",
-  },
+  entry: "./server.ts",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].js",
@@ -19,7 +18,7 @@ const webpackConfig = {
   module: {
     rules: [
       {
-        test: /.tsx?$/,
+        test: /.ts$/,
         use: [
           {
             loader: "ts-loader",
@@ -33,7 +32,7 @@ const webpackConfig = {
     ],
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".js"],
   },
   devtool: "source-map",
   target: "node",
@@ -51,6 +50,10 @@ const webpackConfig = {
           syntactic: true,
         },
       },
+    }),
+    new TranspilePlugin({
+      extentionMapping: { ".ts": ".js" },
+      preferResolveByDependencyAsCjs: true,
     }),
   ],
 };

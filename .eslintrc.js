@@ -10,10 +10,17 @@ module.exports = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
   ],
-  overrides: [],
+  overrides: [
+    {
+      files: [".eslintrc.js", "webpack.config.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": "off",
+      },
+    },
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: true,
+    project: "./tsconfig.eslint.json",
     ecmaVersion: "latest",
     tsconfigRootDir: __dirname,
   },

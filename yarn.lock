@@ -360,7 +360,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/estree@npm:*":
+"@types/estree@npm:*, @types/estree@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/estree@npm:1.0.0"
   checksum: 910d97fb7092c6738d30a7430ae4786a38542023c6302b95d46f49420b797f21619cdde11fa92b338366268795884111c2eb10356e4bd2c8ad5b92941e9e6443
@@ -508,6 +508,16 @@ __metadata:
   version: 0.0.30
   resolution: "@types/strip-json-comments@npm:0.0.30"
   checksum: 829ddd389645073f347c5b1924a8c34b8813af29756576e511c46f40e218193cf93ccbade62661d47fc70f707e98f410331729b8c20edfcb2e807d51df1ad4b7
+  languageName: node
+  linkType: hard
+
+"@types/webpack-node-externals@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/webpack-node-externals@npm:3.0.0"
+  dependencies:
+    "@types/node": "*"
+    webpack: ^5
+  checksum: ea87e99d389708ebf144e47ba1353bac2ab524f80f022b07ce683ba451f326a6cfd62acae36f0a727823a3c198e59de70baac20cf1ea9eb5cf0980ab55f758c7
   languageName: node
   linkType: hard
 
@@ -1639,6 +1649,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"es-module-lexer@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "es-module-lexer@npm:1.2.1"
+  checksum: c4145b853e1491eaa5d591e4580926d242978c38071ad3d09165c3b6d50314cc0ae3bf6e1dec81a9e53768b9299df2063d2e4a67d7742a5029ddeae6c4fc26f0
+  languageName: node
+  linkType: hard
+
 "escalade@npm:^3.1.1":
   version: 3.1.1
   resolution: "escalade@npm:3.1.1"
@@ -1845,6 +1862,7 @@ __metadata:
     "@types/express": ^4.17.17
     "@types/morgan": ^1.9.4
     "@types/node": ^18.15.3
+    "@types/webpack-node-externals": ^3.0.0
     "@typescript-eslint/eslint-plugin": ^5.55.0
     "@typescript-eslint/parser": ^5.55.0
     cookie-parser: ^1.4.6
@@ -1857,6 +1875,7 @@ __metadata:
     fork-ts-checker-webpack-plugin: ^8.0.0
     morgan: ^1.10.0
     prettier: 2.8.4
+    transpile-webpack-plugin: ^1.1.2
     ts-loader: ^9.4.2
     ts-node-dev: ^2.0.0
     typescript: ^5.0.2
@@ -2460,6 +2479,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-core-module@npm:^2.12.0":
+  version: 2.12.0
+  resolution: "is-core-module@npm:2.12.0"
+  dependencies:
+    has: ^1.0.3
+  checksum: f7f7eb2ab71fd769ee9fb2385c095d503aa4b5ce0028c04557de03f1e67a87c85e5bac1f215945fc3c955867a139a415a3ec4c4234a0bffdf715232660f440a6
+  languageName: node
+  linkType: hard
+
 "is-core-module@npm:^2.9.0":
   version: 2.11.0
   resolution: "is-core-module@npm:2.11.0"
@@ -2692,6 +2720,13 @@ __metadata:
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
   checksum: ad580b4bdbb7ca1f7abf7e1bce63a9a0b98e370cf40194b03380a46b4ed799c9573029599caebc1b14e3f24b111aef72b96674a56cfa105e0f5ac70546cdc005
+  languageName: node
+  linkType: hard
+
+"lodash@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
   languageName: node
   linkType: hard
 
@@ -3424,6 +3459,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resolve@npm:^1.22.1":
+  version: 1.22.3
+  resolution: "resolve@npm:1.22.3"
+  dependencies:
+    is-core-module: ^2.12.0
+    path-parse: ^1.0.7
+    supports-preserve-symlinks-flag: ^1.0.0
+  bin:
+    resolve: bin/resolve
+  checksum: fb834b81348428cb545ff1b828a72ea28feb5a97c026a1cf40aa1008352c72811ff4d4e71f2035273dc536dcfcae20c13604ba6283c612d70fa0b6e44519c374
+  languageName: node
+  linkType: hard
+
 "resolve@patch:resolve@^1.0.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>":
   version: 1.22.1
   resolution: "resolve@patch:resolve@npm%3A1.22.1#~builtin<compat/resolve>::version=1.22.1&hash=c3c19d"
@@ -3434,6 +3482,19 @@ __metadata:
   bin:
     resolve: bin/resolve
   checksum: 5656f4d0bedcf8eb52685c1abdf8fbe73a1603bb1160a24d716e27a57f6cecbe2432ff9c89c2bd57542c3a7b9d14b1882b73bfe2e9d7849c9a4c0b8b39f02b8b
+  languageName: node
+  linkType: hard
+
+"resolve@patch:resolve@^1.22.1#~builtin<compat/resolve>":
+  version: 1.22.3
+  resolution: "resolve@patch:resolve@npm%3A1.22.3#~builtin<compat/resolve>::version=1.22.3&hash=c3c19d"
+  dependencies:
+    is-core-module: ^2.12.0
+    path-parse: ^1.0.7
+    supports-preserve-symlinks-flag: ^1.0.0
+  bin:
+    resolve: bin/resolve
+  checksum: ad59734723b596d0891321c951592ed9015a77ce84907f89c9d9307dd0c06e11a67906a3e628c4cae143d3e44898603478af0ddeb2bba3f229a9373efe342665
   languageName: node
   linkType: hard
 
@@ -3816,7 +3877,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:^5.1.3":
+"terser-webpack-plugin@npm:^5.1.3, terser-webpack-plugin@npm:^5.3.7":
   version: 5.3.7
   resolution: "terser-webpack-plugin@npm:5.3.7"
   dependencies:
@@ -3872,6 +3933,19 @@ __metadata:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
+  languageName: node
+  linkType: hard
+
+"transpile-webpack-plugin@npm:^1.1.2":
+  version: 1.1.2
+  resolution: "transpile-webpack-plugin@npm:1.1.2"
+  dependencies:
+    lodash: ^4.17.21
+    resolve: ^1.22.1
+    schema-utils: ^4.0.0
+  peerDependencies:
+    webpack: ^5.61.0
+  checksum: 4e79b41c37b6dcf32de2b86c883e0ef562e4cd4fc529d26a1e6dd631f4440b8ef1596a074f794c25d3c0e01243a40995322b58651694fe7fc264bf57da33bcbf
   languageName: node
   linkType: hard
 
@@ -4186,6 +4260,43 @@ __metadata:
   version: 3.2.3
   resolution: "webpack-sources@npm:3.2.3"
   checksum: 989e401b9fe3536529e2a99dac8c1bdc50e3a0a2c8669cbafad31271eadd994bc9405f88a3039cd2e29db5e6d9d0926ceb7a1a4e7409ece021fe79c37d9c4607
+  languageName: node
+  linkType: hard
+
+"webpack@npm:^5":
+  version: 5.79.0
+  resolution: "webpack@npm:5.79.0"
+  dependencies:
+    "@types/eslint-scope": ^3.7.3
+    "@types/estree": ^1.0.0
+    "@webassemblyjs/ast": 1.11.1
+    "@webassemblyjs/wasm-edit": 1.11.1
+    "@webassemblyjs/wasm-parser": 1.11.1
+    acorn: ^8.7.1
+    acorn-import-assertions: ^1.7.6
+    browserslist: ^4.14.5
+    chrome-trace-event: ^1.0.2
+    enhanced-resolve: ^5.10.0
+    es-module-lexer: ^1.2.1
+    eslint-scope: 5.1.1
+    events: ^3.2.0
+    glob-to-regexp: ^0.4.1
+    graceful-fs: ^4.2.9
+    json-parse-even-better-errors: ^2.3.1
+    loader-runner: ^4.2.0
+    mime-types: ^2.1.27
+    neo-async: ^2.6.2
+    schema-utils: ^3.1.0
+    tapable: ^2.1.1
+    terser-webpack-plugin: ^5.3.7
+    watchpack: ^2.4.0
+    webpack-sources: ^3.2.3
+  peerDependenciesMeta:
+    webpack-cli:
+      optional: true
+  bin:
+    webpack: bin/webpack.js
+  checksum: 3fbd82dadc75c8f823c900c5d50263830b77e6be6a8abb26eec12f93dec94c2f07fa44c1ef1f28319682404e532d9707ed04ed6cb89af87ca7d544e435d8ef95
   languageName: node
   linkType: hard
 

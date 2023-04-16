@@ -268,9 +268,3 @@ fabric.properties
 
 .yarn/*
 .pnp.*
-
-# ESLint config
-.eslintrc.*
-
-# Webpack configuration
-webpack.config.js
